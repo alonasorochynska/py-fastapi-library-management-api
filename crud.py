@@ -4,7 +4,6 @@ import models
 import schemas
 
 
-# books/?skip=5&limit=5
 def get_all_books(db: Session, skip: int = 0, limit: int = 5):
     return db.query(models.Book).offset(skip).limit(limit).all()
 
